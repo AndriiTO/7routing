@@ -1,13 +1,13 @@
-
+import css from "./page.module.css";
 export default function HomePage() {
 
   return (
 
-    <main>
+    <main className={css.main}>
 
-      <h1>Welcome to NoteHub</h1>
+      <h1 className={css.title}>Welcome to NoteHub</h1>
 
-      <p>
+      <p className={css.text}>
         NoteHub is a simple note app
       </p>
 

@@ -1,19 +1,20 @@
-import SidebarNotes from "./@sidebar/SidebarNotes";
 
-export default function NotesFilterLayout({
-  children,
-}: {
+
+type NotesLayoutProps = {
   children: React.ReactNode;
-}) {
+  sidebar: React.ReactNode;
+};
+
+const NotesLayout = ({ children, sidebar }: NotesLayoutProps) => {
   return (
-    <div style={{ display: "flex" }}>
-
-      <SidebarNotes />
-
-      <main style={{ flex: 1, padding: "1rem" }}>{children}</main>
-    </div>
+    <section>
+      <aside>{sidebar}</aside>
+      <div>{children}</div>
+    </section>
   );
-}
+};
+
+export default NotesLayout;
 
 
 
